@@ -29,16 +29,6 @@ const NotFoundPage = () => {
       <h1 style={headingStyles}>Page not found</h1>
       <p style={paragraphStyles}>
         Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
       </p>
     </main>
   )
@@ -46,4 +36,4 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head: HeadFC = () => <title>Not found</title>
+export const Head: HeadFC = () => <title>404 | Not found</title>

@@ -1,0 +1,169 @@
+@use "../mixins";
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    @include mixins.flex__vertically-centered(space-between);
+    font-weight: 600;
+    background-color: #000;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+
+    #nav-links {
+        @include mixins.flex__vertically-centered(space-evenly);
+        width: 50%;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: yellow;
+            }
+        }
+    }
+
+    #nav-name {
+        font-weight: 700;
+        font-size: larger;
+        margin-left: 10%;
+        padding: 1rem;
+    }
+
+    #themes-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 10%;
+        background: url('https://api.iconify.design/ci/settings.svg?color=white') no-repeat center center / contain;
+
+        &:hover {
+            cursor: pointer;
+            background: url('https://api.iconify.design/ci/settings.svg?color=yellow') no-repeat center center / contain;
+        }
+    }
+
+    #null {
+        display: none;
+    }
+
+    #overlay {
+        position: fixed;
+        inset: 0;
+        background: #00000090;
+        z-index: 50;
+    }
+
+    
+    .nav-settings {
+        position: fixed;
+        z-index: 51;
+        top: 0;
+        right: 0;
+        transform: translateX(0);
+        background: #f5f5f5;
+        height: 100vh;
+        transition: transform .45s ease 0s;
+
+        div {
+            color: #000;
+            font-weight: bold;
+            font-size: 1.2rem;
+            padding: 1rem;
+        }
+        
+        ul {
+            margin-left: 1rem;
+            @include mixins.flex__vertically-centered(none);
+            list-style: none;
+            margin-right: 2rem;
+
+            label {
+                margin: 0.5rem;
+                padding: 4px;
+                border: solid 2px #f5f5f5;
+                
+            }
+
+            input {
+                display: none;  
+
+                +label {
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &:checked {
+
+                    +label {
+                        border-radius: 50%;
+                        border: solid 2px #00000020;
+                        transition: border .4s ease;
+                    }
+                }
+            }
+
+            li {
+                width: 1.5rem; 
+                height: 1.5rem;
+                border-radius: 50%;
+            }
+
+            #earth {
+                background: url("../../assets/earth-icon.png") no-repeat center center / contain;
+                border: 1px solid #000;
+            }
+
+            #dark {
+                background-color: #101010;
+            }
+
+            #light {
+                background-color: #fff;
+                border: 1px solid #000;
+            }
+
+            #banana {
+                background: url("../../assets/icon-banana.png") no-repeat center center / contain;
+            }
+            
+            #red {
+                background-color: red;
+            }
+        }
+    }
+
+    .hidden {
+        transform: translateX(100%);
+    }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        #nav-links {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 525px) {
+
+    nav {
+        .nav-settings {
+            width: 50%;
+        }
+    }
+}

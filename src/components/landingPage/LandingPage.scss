@@ -1,0 +1,189 @@
+@use "../mixins";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
+
+section {
+    position: fixed;
+    top: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    width: 100%;
+    height: 100vh;
+
+    #earth {
+        position: absolute;
+        bottom: -20vh;
+        left: -10vw;
+
+        img{
+            width: 120vw;
+        }
+    }
+
+    #hero {
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 20vw;
+        }
+    }
+
+    #main-text {
+        position: absolute;
+        z-index: 5;
+        text-align: center;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        
+        #greeting {
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+        
+        #short-intro {
+            font-weight: 300;
+            font-size: 1.3rem;
+        }
+    }
+
+    .monkey {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .running {
+        // top: 20%;
+        // left: 25%;
+
+        // img {
+        //     width: 8vw;
+        // }
+
+        @include mixins.orb-styles (20%, 25%, 8vw);
+    }
+
+    .sleeping {
+        // bottom: 20%;
+        // right: 10%;
+
+        // img {
+        //     width: 14vw;
+        // }
+
+        @include mixins.orb-styles (80%, 90%, 14vw);
+    }
+
+    .standing {
+        top: 20%;
+        right: 30%;
+
+        img {
+            width: 6vw;
+        }
+    }
+
+    .bored {
+        top: 25%;
+        right: 8%;
+
+        img {
+            width: 9vw;
+        }
+    }
+
+    .jumping {
+        top: 45%;
+        left: 10%;
+
+        img {
+            width: 8vw;
+        }
+    }
+
+    .pimpedout {
+        bottom: -17%;
+        left: -8%;
+
+        img {
+            width: 20vw;
+        }
+    }
+
+    #flexing-monkey {
+        position: absolute;
+        z-index: 3;
+        bottom: -55vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            width: 35vw;
+        }
+    }
+
+    #orbs {
+
+        #orb-1 {
+            position: absolute;
+            width: 2vw;
+            top: 15vh;
+            left: 10vw;
+        }
+
+        #orb-2 {
+            position: absolute;
+            width: 1.5vw;
+            top: 33vh;
+            left: 5vw;
+        }
+
+        #orb-3 {
+            position: absolute;
+            width: 1.8vw;
+            top: 25vh;
+            left: 18vw;
+        }
+
+        #orb-4 {
+            position: absolute;
+            width: 2.5vw;
+            top: 12vh;
+            right: 22vw;
+        }
+        
+
+        #orb-5 {
+            position: absolute;
+            width: 1.7vw;
+            top: 25vh;
+            right: 5vw;
+        }
+
+        #orb-6 {
+            position: absolute;
+            width: 2.2vw;
+            top: 33vh;
+            right: 25vw;
+        }
+
+        #orb-7 {
+            position: absolute;
+            width: 1.3vw;
+            top: 13vh;
+            left: 38vw;
+        }
+
+        #orb-8 {
+            position: absolute;
+            width: 1.7vw;
+            top: 15vh;
+            left: 58vw;
+        }
+
+    }
+}

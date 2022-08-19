@@ -1,0 +1,14 @@
+@mixin flex__vertically-centered ($justify-content) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify-content;
+}
+
+@mixin orb-styles ($top, $left, $image-width) {
+    top: $top;
+    left: $left;
+
+    img {
+        width: $image-width;
+    }
+}
