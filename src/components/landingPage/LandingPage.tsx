@@ -16,9 +16,8 @@ import { changeTheme, selectedTheme } from "../navbar/ThemeContext";
 
 const LandingPage = () => {
     return(
-        <section className={"landing-page-section"}>
-            <div id="earth-landing-page" className="earth"> 
-            </div>
+        <section className="landing-page-section" id="earth">
+            <div id="earth-landing-page" className="earth" />
             <div id="hero">
                 <img src={hero} alt="hero-monkey" />
             </div>

@@ -8,13 +8,23 @@ const Navbar = () => {
 
     const clickHandler = (themeValue: string) => {
         changeTheme(themeValue)
-        const element = document.querySelector("#earth-landing-page")
+
+        const planet = document.querySelector("#earth-landing-page")
 
         // removing pre-existing value
-        element?.removeAttribute("class")
+        planet?.removeAttribute("class")
 
         // adding a new value
-        element?.setAttribute("class", themeValue)
+        planet?.setAttribute("class", themeValue)
+
+        const space = document.querySelector(".landing-page-section")
+
+        //remove pre-existing value
+        space?.removeAttribute("id")
+
+        // adding a new value
+        space?.setAttribute("id", themeValue)
+
     }
 
     return(
@@ -32,25 +42,40 @@ const Navbar = () => {
                 <div style={{color: "#00000090"}}>Theme</div>
                 <ul>
                     <input type="radio" name="theme" id="radio-earth" defaultChecked/>
-                    <label htmlFor="radio-earth">
-                        <li id="earth" onClick={() => {clickHandler("earth")}}></li>
-                    </label>
+                    <div>
+                        <label htmlFor="radio-earth">
+                            <li id="earth" onClick={() => {clickHandler("earth")}}></li>
+                        </label>
+                        <p>Earth</p>
+                    </div>
                     <input type="radio" name="theme" id="radio-dark" />
-                    <label htmlFor="radio-dark">
-                        <li id="dark" onClick={() => {clickHandler("dark")}}></li>
-                    </label>
+                    <div>
+                        <label htmlFor="radio-dark">
+                            <li id="dark" onClick={() => {clickHandler("dark")}}></li>
+                        </label>
+                        <p>Dark</p>
+                    </div>
+                    <div>
                     <input type="radio" name="theme" id="radio-light" />
-                    <label htmlFor="radio-light">
-                        <li id="light" onClick={() => {clickHandler("dark")}}></li>
-                    </label>
+                        <label htmlFor="radio-light">
+                            <li id="light" onClick={() => {clickHandler("light")}}></li>
+                        </label>
+                        <p>Light</p>
+                    </div>
+                    <div>
                     <input type="radio" name="theme" id="radio-banana" />
-                    <label htmlFor="radio-banana">
-                        <li id="banana" onClick={() => {clickHandler("dark")}}></li>
-                    </label>
+                        <label htmlFor="radio-banana">
+                            <li id="banana" onClick={() => {clickHandler("banana")}}></li>
+                        </label>
+                        <p>Banana</p>
+                    </div>
+                    <div>
                     <input type="radio" name="theme" id="radio-red" />
-                    <label htmlFor="radio-red">
-                        <li id="red" onClick={() => {clickHandler("dark")}}></li>
-                    </label>
+                        <label htmlFor="radio-red">
+                            <li id="red" onClick={() => {clickHandler("red")}}></li>
+                        </label>
+                        <p>Red</p>
+                    </div>
                 </ul>
             </div>
         </nav>

@@ -5,34 +5,45 @@ body {
     overflow-x: scroll;
 }
 
+#earth, #dark {
+    background: #111;
+}
+
+#light {
+    background: #f4f4f4;
+}
+
+#banana {
+    background: #ECCB00;
+}
+ 
+#red {
+    background: #D10000;
+}
+
 .landing-page-section {
     position: absolute;
     top: 0;
     font-family: 'Poppins', sans-serif;
-    background: #111;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 
     .earth {
-        background-image: url(../../assets/earth.png);
+        background-image: url("../../assets/earth.png") !important;
     }
-
-    .dark {
-        background-image: url(../../assets/dark-planet.png)
-    }
-
+    
     #earth-landing-page {
         position: absolute;
         bottom: -20vh;
         left: -10vw;
         width: 120vw;
-        height: 90vh;
+        height: 80vh;
+        background-image: url("../../assets/black-planet.png");
     }
 
     #hero {
         position: absolute;
-        z-index: 1;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -44,7 +55,7 @@ body {
 
     #main-text {
         position: absolute;
-        z-index: 5;
+        z-index: 1;
         text-align: center;
         top: 70%;
         left: 50%;
@@ -91,7 +102,6 @@ body {
     }
 
     #flexing-monkey {
-        z-index: 3;
         @include mixins.monkey-orb-styles(70vh, 50%, 35vw);
         transform: translateX(-50%);
     }
