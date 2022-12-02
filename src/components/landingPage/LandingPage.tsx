@@ -1,6 +1,6 @@
 import * as React from "react";
 import hero from "../../assets/monkey-hero.png";
-import earth from "../../assets/earth.png";
+// import earth from "../../assets/earth.png";
 import runningmonkey from "../../assets/monkey-running.png";
 import sleepingmonkey from "../../assets/monkey-sleeping.png";
 import standingmonkey from "../../assets/monkey-standing.png";
@@ -11,11 +11,13 @@ import flexingmonkey from "../../assets/monkey-flexing.png";
 import orb from "../../assets/empty-orb.png";
 import "./LandingPage.scss"
 
+import { changeTheme, selectedTheme } from "../navbar/ThemeContext";
+
+
 const LandingPage = () => {
     return(
-        <section id="landing-page-section">
-            <div id="earth">
-                <img src={earth} alt="earth" />
+        <section className={"landing-page-section"}>
+            <div id="earth-landing-page" className="earth"> 
             </div>
             <div id="hero">
                 <img src={hero} alt="hero-monkey" />

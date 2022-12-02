@@ -5,23 +5,29 @@ body {
     overflow-x: scroll;
 }
 
-#landing-page-section {
-    position: fixed;
+.landing-page-section {
+    position: absolute;
     top: 0;
     font-family: 'Poppins', sans-serif;
     background: #111;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 
-    #earth {
+    .earth {
+        background-image: url(../../assets/earth.png);
+    }
+
+    .dark {
+        background-image: url(../../assets/dark-planet.png)
+    }
+
+    #earth-landing-page {
         position: absolute;
         bottom: -20vh;
         left: -10vw;
-
-        img{
-            width: 120vw;
-        }
+        width: 120vw;
+        height: 90vh;
     }
 
     #hero {
@@ -58,7 +64,6 @@ body {
 
     .monkey {
         position: absolute;
-        z-index: 2;
     }
 
     .running {

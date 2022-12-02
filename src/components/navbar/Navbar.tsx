@@ -1,10 +1,21 @@
-import * as React from "react";
+import React from "react";
 import "./Navbar.scss";
 import { changeTheme, selectedTheme } from "./ThemeContext";
 
 const Navbar = () => {
 
-    const [isOpen, setIsOpen] = React.useState(false);
+    const [isOpen, setIsOpen] = React.useState(false)
+
+    const clickHandler = (themeValue: string) => {
+        changeTheme(themeValue)
+        const element = document.querySelector("#earth-landing-page")
+
+        // removing pre-existing value
+        element?.removeAttribute("class")
+
+        // adding a new value
+        element?.setAttribute("class", themeValue)
+    }
 
     return(
         <nav>
@@ -22,33 +33,23 @@ const Navbar = () => {
                 <ul>
                     <input type="radio" name="theme" id="radio-earth" defaultChecked/>
                     <label htmlFor="radio-earth">
-                        <li id="earth" onClick={() => {
-                            changeTheme("earth")
-                        }}></li>
+                        <li id="earth" onClick={() => {clickHandler("earth")}}></li>
                     </label>
                     <input type="radio" name="theme" id="radio-dark" />
                     <label htmlFor="radio-dark">
-                        <li id="dark" onClick={() => {
-                            changeTheme("dark")
-                        }}></li>
+                        <li id="dark" onClick={() => {clickHandler("dark")}}></li>
                     </label>
                     <input type="radio" name="theme" id="radio-light" />
                     <label htmlFor="radio-light">
-                        <li id="light" onClick={() => {
-                            changeTheme("light")
-                        }}></li>
+                        <li id="light" onClick={() => {clickHandler("dark")}}></li>
                     </label>
                     <input type="radio" name="theme" id="radio-banana" />
                     <label htmlFor="radio-banana">
-                        <li id="banana" onClick={() => {
-                            changeTheme("banana")
-                        }}></li>
+                        <li id="banana" onClick={() => {clickHandler("dark")}}></li>
                     </label>
                     <input type="radio" name="theme" id="radio-red" />
                     <label htmlFor="radio-red">
-                        <li id="red" onClick={() => {
-                            changeTheme("red")
-                        }}></li>
+                        <li id="red" onClick={() => {clickHandler("dark")}}></li>
                     </label>
                 </ul>
             </div>
