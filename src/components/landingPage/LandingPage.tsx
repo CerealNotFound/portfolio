@@ -13,7 +13,7 @@ import "./LandingPage.scss"
 
 const LandingPage = () => {
     return(
-        <section>
+        <section id="landing-page-section">
             <div id="earth">
                 <img src={earth} alt="earth" />
             </div>

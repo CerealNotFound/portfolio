@@ -4,11 +4,19 @@
     justify-content: $justify-content;
 }
 
-@mixin orb-styles ($top, $left, $image-width) {
+@mixin monkey-orb-styles ($top, $left, $image-width) {
+    position: absolute;
     top: $top;
     left: $left;
 
     img {
         width: $image-width;
     }
+}
+
+@mixin empty-orb-styles ($top, $left, $image-width) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $image-width;
 }

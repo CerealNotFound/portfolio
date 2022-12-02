@@ -1,8 +1,9 @@
-import * as React from "react"
-import type { HeadFC } from "gatsby"
-import Navbar from "../components/navbar/Navbar"
-import LandingPage from "../components/landingPage/LandingPage"
-import { selectedTheme } from "../components/navbar/ThemeContext"
+import * as React from "react";
+import type { HeadFC } from "gatsby";
+import Navbar from "../components/navbar/Navbar";
+import LandingPage from "../components/landingPage/LandingPage";
+import Introduction from "../components/introduction/Introduction";
+import { selectedTheme } from "../components/navbar/ThemeContext";
 
 const IndexPage = () => {
   return (
@@ -12,6 +13,7 @@ const IndexPage = () => {
       }}>
         <Navbar/>
         <LandingPage/>
+        <Introduction/>
       </selectedTheme.Provider>
     </main>
   )
