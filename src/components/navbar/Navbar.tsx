@@ -40,15 +40,15 @@ const Navbar = () => {
                 <div>Settings</div>
                 <div style={{color: "#00000090"}}>Theme</div>
                 <ul>
-                    <input type="radio" name="theme" id="radio-earth" defaultChecked/>
                     <div>
+                    <input type="radio" name="theme" id="radio-earth" defaultChecked/>
                         <label htmlFor="radio-earth">
                             <li id="earth" onClick={() => {clickHandler("earth")}}></li>
                         </label>
                         <p>Earth</p>
                     </div>
-                    <input type="radio" name="theme" id="radio-dark" />
                     <div>
+                    <input type="radio" name="theme" id="radio-dark" />
                         <label htmlFor="radio-dark">
                             <li id="dark" onClick={() => {clickHandler("dark")}}></li>
                         </label>
