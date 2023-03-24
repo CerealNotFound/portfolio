@@ -44,9 +44,10 @@ body {
 
     #hero {
         position: absolute;
-        top: 40%;
+        top: calc(40% - 50px);
         left: 50%;
         transform: translate(-50%, -50%);
+        opacity: 0;
 
         img {
             width: 20vw;
@@ -102,6 +103,7 @@ body {
     }
 
     #flexing-monkey {
+        position: absolute;
         @include mixins.monkey-orb-styles(70vh, 50%, 35vw);
         transform: translateX(-50%);
     }

@@ -10,12 +10,24 @@ import pimpedoutmonkey from "../../assets/monkey-pimpedout.png";
 import flexingmonkey from "../../assets/monkey-flexing.png";
 import orb from "../../assets/empty-orb.png";
 import "./LandingPage.scss"
+import gsap from "gsap";
 
 import { changeTheme, selectedTheme } from "../navbar/ThemeContext";
+// import { EasePack } from "gsap-trial/all";
+
 
 
 const LandingPage = () => {
+    
+    let tl = gsap.timeline()
+
+    React.useEffect(() => {    
+        tl.to("#hero, .running, .sleeping, .standing, .bored, .jumping, .pimpedout", {y: 50, ease: "ease-in", duration: 0.6, opacity: 1})
+          .to("#hero", {ease: "none", rotation: 360, duration: 5, repeat: Infinity})
+    }, [])
+
     return(
+        
         <section className="landing-page-section" id="earth">
             <div id="earth-landing-page" className="earth" />
             <div id="hero">

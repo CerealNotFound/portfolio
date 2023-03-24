@@ -24,7 +24,6 @@ const Navbar = () => {
 
         // adding a new value
         space?.setAttribute("id", themeValue)
-
     }
 
     return(
